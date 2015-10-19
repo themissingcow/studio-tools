@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title>Knob rendering test</title>
+
+	<link href="knobStyles.css" rel="stylesheet"/>
+
+	<script src="knobRenderer.js" type="text/javascript"></script>
+	<script src="knobData.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+
+		var init = function() {
+			var knob = document.getElementById( "mainKnob" );
+			renderRotaryKnob( knob, knobData );
+		}
+
+	</script>
+
+</head>
+<body onload="init();">
+
+	<div id="mainKnob" class="knob"></div>
+
+</body>
+</html>
