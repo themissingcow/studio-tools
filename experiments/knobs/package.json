@@ -1,0 +1,13 @@
+{
+  "author": "Tom Cowland",
+  "name": "knob-experiemnt",
+  "version": "1.0.0",
+  "engines": {
+    "node": "0.12.7",
+    "npm": "2.13.x"
+  },
+  "dependencies": {
+    "gulp": "3.8.8",
+    "browser-sync": "1.7.1"
+  }
+}
