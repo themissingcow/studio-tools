@@ -1,8 +1,10 @@
+body {
+	font-family: sans-serif;
+}
+
 .knob {
 	width: 200px;
 	height: 200px;
-
-
 }
 
 .knob-container {
@@ -19,6 +21,7 @@
 
 .knob-dial {
 
+	position: relative;
 	width: 70%;
 	height: 70%;
 
@@ -29,7 +32,7 @@
 
 	text-align: center;
 
-	position: relative;
+	cursor: ew-resize;
 }
 
 .knob-dial-mark {
@@ -85,5 +88,19 @@
 	left: 0;
 	right: 0;
 	bottom: 90%;
+}
+
+.knob-value-display {
+
+	-webkit-user-select: none;
+
+	position: absolute;
+
+	width: 100%;
+	top: 50%;
+	left: 0;
+	right: 0;
+
+	text-align: center;
 }
 

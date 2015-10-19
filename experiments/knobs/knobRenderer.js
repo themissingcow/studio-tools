@@ -24,8 +24,14 @@ function renderRotaryKnob( element, knobData ) {
 		parent.appendChild( dial );
 
 		dial.appendChild( createMark('knob-dial-mark') );
-	}
 
+		var valueRange = knobData.valueEnd - knobData.valueStart;
+		var angleRange = valueRange * 360;
+
+		var normalizedValue = ((knobData.value - knobData.minValue) / (knobData.maxValue - knobData.minValue));
+		var knobAngle = ( angleRange * normalizedValue ) + ( 360 * knobData.valueStart );
+		dial.style.transform = 'rotateZ( ' + knobAngle + 'deg)';
+	}
 
 	var renderScale = function( parent ) {
 
@@ -58,6 +64,12 @@ function renderRotaryKnob( element, knobData ) {
 
 	renderScale( container );
 	renderDial( container );
+
+	var readout = document.createElement( 'div' );
+	readout.classList.add( 'knob-value-display' );
+	readout.innerHTML = knobData.value;
+
+	container.appendChild( readout );
 }
 
 
